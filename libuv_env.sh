@@ -6,4 +6,10 @@ cd libuv-1.19.1   &&   sh autogen.sh   &&   ./configure  &&  make  &&  make chec
 make install  \
 \
 ls /usr/local/lib/libuv*  || \
-ls /usr/local/include/uv*
+ls /usr/local/include/uv*  \
+cd ..  \
+\
+wget https://raw.githubusercontent.com/junbee/myshell/master/libuv_helloworld.c \
+gcc libuv_helloworld.c -o libuv_helloworld.exe  \
+libuv_helloworld.exe  \
+\
