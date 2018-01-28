@@ -1,6 +1,6 @@
 {
  "vhosts": [ {
-     "name": "localhost",
+     "name": "192.210.134.207",
      "port": "7681",
      "interface": "lo",
 #     "host-ssl-key":  "/etc/pki/tls/private/libwebsockets.org.key",
