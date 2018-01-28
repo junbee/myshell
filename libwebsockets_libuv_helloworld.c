@@ -48,6 +48,10 @@ int fork(void)
 
 #include <uv.h>
 
+
+#define INSTALL_DATADIR    "/usr/local/share"
+
+
 static struct lws_context *context;
 static char config_dir[128];
 static int opts = 0, do_reload = 1;
