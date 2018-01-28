@@ -1,4 +1,5 @@
 wget https://raw.githubusercontent.com/junbee/myshell/master/libuv_env.sh  -O  libuv_env.sh
+chmod u+x libuv_env.sh
 ./libuv_env.sh
 
 yum -y install  gcc make cmake openssl-devel && \
