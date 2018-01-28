@@ -212,7 +212,7 @@ int main(int argc, char **argv)
 	int status, syslog_options = LOG_PID | LOG_PERROR;
 #endif
 
-	strcpy(config_dir, "/etc/lwsws");
+	strcpy(config_dir, "~/testlws");
 	while (n >= 0) {
 		n = getopt_long(argc, argv, "hd:c:", options, NULL);
 		if (n < 0)
