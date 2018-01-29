@@ -1,4 +1,6 @@
+echo ""
 echo -e "\033[47;34mbegin libuv_env.sh  ===============================\033[0m"
+echo ""
 cd ~
 
 yum -y install autoconf  automake  libtool  make   &&  \
@@ -13,4 +15,6 @@ chmod 755  libuv_helloworld.exe
 ./libuv_helloworld.exe
 
 cd ~
+echo ""
 echo -e "\033[47;34mend libuv_env.sh  ===============================\033[0m"
+echo ""
