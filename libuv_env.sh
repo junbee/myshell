@@ -1,4 +1,4 @@
-echo "begin libuv_env.sh"
+echo -e "\033[47;34mbegin libuv_env.sh  ===============================\033[0m"
 cd ~
 
 yum -y install autoconf  automake  libtool  make   &&  \
@@ -12,5 +12,5 @@ gcc libuv_helloworld.c -o libuv_helloworld.exe  -L/usr/local/lib -luv  -Wl,-rpat
 chmod 755  libuv_helloworld.exe
 ./libuv_helloworld.exe
 
-echo "end libuv_env.sh"
 cd ~
+echo -e "\033[47;34mend libuv_env.sh  ===============================\033[0m"
