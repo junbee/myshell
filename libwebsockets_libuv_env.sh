@@ -1,6 +1,4 @@
-{ 
-wget https://raw.githubusercontent.com/junbee/myshell/master/libuv_env.sh  -O  -qO- | bash -
- ; }
+{ wget https://raw.githubusercontent.com/junbee/myshell/master/libuv_env.sh  -O  -qO- | bash - ; } | echo
  
 echo "begin libwebsockets_libuv_env.sh"
 cd ~
