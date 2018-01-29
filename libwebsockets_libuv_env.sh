@@ -1,7 +1,9 @@
 wget https://raw.githubusercontent.com/junbee/myshell/master/libuv_env.sh -qO- | bash -
 wait
 
+echo ""
 echo -e "\033[47;34mbegin libwebsockets_libuv_env.sh  ===============================\033[0m"
+echo ""
 
 cd ~
 
@@ -17,7 +19,7 @@ make         && \
 make install
 
 cd ~
-wget https://raw.githubusercontent.com/junbee/myshell/master/myliblocal.conf  -O  /etc/ld.so.conf.d/myliblocal.conf
+echo "/usr/local/lib" > /etc/ld.so.conf.d/myliblocal.conf
 ldconfig
 
 mkdir  /etc/lwsws
@@ -28,7 +30,8 @@ wget https://raw.githubusercontent.com/junbee/myshell/master/etc-lwsws-conf.d-lo
 wget https://raw.githubusercontent.com/junbee/myshell/master/libwebsockets_libuv_helloworld.c  -O  libwebsockets_libuv_helloworld.c
 gcc libwebsockets_libuv_helloworld.c -o libwebsockets_libuv_helloworld.exe  -L/usr/local/lib -luv -lwebsockets   -Wl,-rpath=/usr/local/lib
 
-
+echo ""
 echo -e "\033[47;34mend libwebsockets_libuv_env.sh  ===============================\033[0m"
+echo ""
 
 ./libwebsockets_libuv_helloworld.exe
