@@ -1,6 +1,7 @@
-wget https://raw.githubusercontent.com/junbee/myshell/master/libuv_env.sh  -O  libuv_env.sh
-chmod u+x libuv_env.sh
-./libuv_env.sh
+wget https://raw.githubusercontent.com/junbee/myshell/master/libuv_env.sh  -O  -qO- | bash -
+
+echo "begin libwebsockets_libuv_env.sh"
+cd ~
 
 yum -y install  gcc make cmake openssl-devel && \
 wget https://github.com/warmcat/libwebsockets/archive/v2.4.1.tar.gz && \
@@ -24,4 +25,7 @@ wget https://raw.githubusercontent.com/junbee/myshell/master/etc-lwsws-conf.d-lo
 
 wget https://raw.githubusercontent.com/junbee/myshell/master/libwebsockets_libuv_helloworld.c  -O  libwebsockets_libuv_helloworld.c
 gcc libwebsockets_libuv_helloworld.c -o libwebsockets_libuv_helloworld.exe  -L/usr/local/lib -luv -lwebsockets   -Wl,-rpath=/usr/local/lib
+
+echo "end libwebsockets_libuv_env.sh"
+
 ./libwebsockets_libuv_helloworld.exe
