@@ -1,1 +1,22 @@
 pkg-config --list-all |grep gtk
+
+
+rpm -qa | grep glib
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
