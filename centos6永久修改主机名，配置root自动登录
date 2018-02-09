@@ -1,0 +1,38 @@
+
+centos6永久修改主机名：
+http://blog.csdn.net/lijie12233/article/details/78209181
+
+vi /etc/sysconfig/network
+HOSTNAME=localhost.localdomain  #修改localhost.localdomain为master
+
+vi /etc/hosts
+127.0.0.1    localhost.localdomain  #修改localhost.localdomain为master
+
+reboot
+
+
+
+配置root自动登录：
+http://blog.csdn.net/zdy1127/article/details/50659327
+
+vi /etc/gdm/custom.conf
+
+然后在[daemon]下面添加：
+
+[daemon]
+AutomaticLoginEnable=True
+AutomaticLogin=root  #你想自动登录的用户名
+
+保存并重启，重启的时候已经以root用户登录了。
+
+
+
+
+
+
+
+
+
+
+
+
