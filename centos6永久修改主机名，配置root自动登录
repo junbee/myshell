@@ -27,6 +27,16 @@ AutomaticLogin=root  #你想自动登录的用户名
 
 
 
+删除用户：
+
+删除用户可参见： CentOS 7用户账户配置
+例如：
+
+userdel danyl 只删除用户，不删除相关的文件以及目录；
+
+userdel -rf danyl 强制删除danyl用户的所有文件及目录，请谨慎操作。
+
+
 
 
 
