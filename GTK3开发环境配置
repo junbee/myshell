@@ -36,7 +36,30 @@ helloworld
 cd ~
 umount /mnt/cdrom
 
-
+参考：
+配置本地和共享yum源，定制属于自己的yum仓库
+http://blog.csdn.net/danneel/article/details/52098527
+命令：
+ ####查看软件包
+  yum list all              ##列出yum源仓库里面的所有可用的安装包 
+  yum list installed        ##列出所有已经安装的安装包  
+  yum list available        ##列出没有安装的安装包
+ ####安装软件
+  yum install softwarename  ##安装指定的软件
+  yum reinstall softarename ##重新安装指定的软件
+  yum localinstall 第三方software  ##安装第三方文件并且会解决软件的依赖关系
+  yum remove  softwarename  ##卸装指定的软件
+ ####查找软件的信息
+  yum info software         ##查看软的信息
+  yum search keywords       ##根据关键字查找到相关安装包软件的信息
+  yum whatprovides filename ##查找包含指定文件的相关安装包
+ ####对于软件组
+   yum groups list          ##列出软件组
+   yum groups install       ##安装一个软件组
+   yum group remove         ##卸载一个软件组
+   yum groups info          ##查看一个软件组的信息
+   
+   
 
 
 
