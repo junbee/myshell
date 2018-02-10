@@ -1,0 +1,34 @@
+
+
+查看GTK版本：
+pkg-config --list-all |grep gtk
+pkg-config --modversion gtk+-3.0
+
+使用本地YUM源：
+mkdir /mnt/cdrom
+mount /dev/sr0 /mnt/cdrom
+ls /mnt/cdrom
+vi /etc/yum.repos.d/myyum.repo
+内容如下：（前后无空行！）
+[test]
+name=myyumsource
+baseurl=file:///mnt/cdrom
+gpgcheck=0
+
+yum clean all
+yum repolist
+
+yum -y install gtk3-devel
+
+
+
+
+
+
+
+
+
+
+
+
+
