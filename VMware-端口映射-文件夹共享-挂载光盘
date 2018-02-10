@@ -1,0 +1,17 @@
+mkdir /mnt/cdrom
+mount /dev/sr0 /mnt/cdrom
+
+
+端口映射
+查看centos的ip：
+ifconfig
+通过VMware的菜单，映射22端口即可。 centos7的防火墙默认开放22端口。
+
+文件夹共享：
+VMware通过配置选择母鸡的文件夹。
+光驱使用“自动检测”。
+开机后，VMware的菜单选择“安装VMwareTool”。
+自动加载光驱。解压并执行光驱的文件。
+
+
+
