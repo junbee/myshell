@@ -14,6 +14,8 @@ VMware通过配置选择母鸡的文件夹。
 光驱使用“自动检测”。
 开机后，VMware的菜单选择“安装VMwareTool”。
 自动加载光驱。解压并执行光驱的文件。
+kernel的路径：ls /usr/src/kernels
+/usr/src/kernels/3.10.0-693.2.2.el7.centos.plus.i686
 
 
 
