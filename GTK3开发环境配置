@@ -27,11 +27,14 @@ yum repolist
 yum -y install gtk3-devel
 
 
+helloworld
 
 
 
 
-
+卸载：
+cd ~
+umount /mnt/cdrom
 
 
 
