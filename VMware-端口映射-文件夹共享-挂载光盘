@@ -6,6 +6,8 @@ mount /dev/sr0 /mnt/cdrom
 查看centos的ip：
 ifconfig
 通过VMware的菜单，映射22端口即可。 centos7的防火墙默认开放22端口。
+小鸡的网络要打开。要设置为自动连接。
+
 
 文件夹共享：
 VMware通过配置选择母鸡的文件夹。
