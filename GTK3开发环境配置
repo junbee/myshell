@@ -25,11 +25,14 @@ yum clean all
 yum repolist
 
 yum -y install gtk3-devel
+pkg-config --cflags gtk+-3.0
 
 
-helloworld
-
-
+helloworld:
+cd ~
+wget https://raw.githubusercontent.com/junbee/myshell/master/gtk3_helloworld.c  -O gtk3_helloworld.c
+gcc gtk3_helloworld.c -o gtk3_helloworld.exe  `pkg-config --cflags --libs gtk+-3.0`
+./gtk3_helloworld.exe
 
 
 卸载：
