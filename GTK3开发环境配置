@@ -14,13 +14,16 @@ pkg-config --modversion gtk+-3.0
 mkdir /mnt/cdrom
 mount /dev/sr0 /mnt/cdrom
 ls /mnt/cdrom
+mv /etc/yum.repos.d/   /etc/yum.repos.d_ori/
+mkdir /etc/yum.repos.d/
 vi /etc/yum.repos.d/myyum.repo
 内容如下：（前后无空行！）
-[test]
+[cdrom_repo]
 name=myyumsource
 baseurl=file:///mnt/cdrom
 gpgcheck=0
 
+cat /etc/yum.repos.d/myyum.repo
 yum clean all
 yum repolist
 
