@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>ajax例子</title>
+<script language="javascript" type="text/javascript" src="http://www.abc.com:6003/001.js"></script>
+<link rel="stylesheet" type="text/css" href="http://www.abc.com:6003/001.css" />
+<style>
+ul {list-style-type:none; margin:8px; padding:0px;display:block;float:left;}
+li {list-style-type:none; margin:0px; padding:0px;}
+
+.myspan { margin:1px; padding:4px; background-color:#FFC; cursor:pointer; }
+.myspan:hover{ background-color: burlywood; }
+</style>
+<script type="text/javascript" language="javascript">
+function lizhi001(obj,evt){
+	var panel = document.getElementById("panel01");
+	if( "none" == panel.style.display ){
+		panel.style.display = "block";
+	}else{
+		panel.style.display = "none";
+	}
+}
+
+var ajax = false;
+function ajax_init(){
+    //开始初始化XMLHttpRequest对象
+    if(window.XMLHttpRequest){ //Mozilla 浏览器
+        ajax = new XMLHttpRequest();
+        //if (ajax.overrideMimeType){ //设置MiME类别
+        //    ajax.overrideMimeType("text/xml");
+        //}
+    }
+    else if (window.ActiveXObject){ // IE浏览器
+        try{
+            ajax = new ActiveXObject("Msxml2.XMLHTTP");
+        }
+        catch (e){
+            try{ ajax = new ActiveXObject("Microsoft.XMLHTTP"); } catch (e) {}
+        }
+    }
+    if (!ajax){ // 异常，创建对象实例失败
+        window.alert("不能创建XMLHttpRequest对象实例.");
+        return false;
+    }
+     
+	 /**
+    //通过Post方式打开连接
+    ajax.open("POST", urlpost, true);
+    //定义传输的文件HTTP头信息
+    ajax.setRequestHeader("Content-Type","application/x-www-form-urlencoded");
+    //发送POST数据
+    var postStr = "myurl="+encodeURIComponent(poststr01)+"&";
+    ajax.send(postStr);
+    //获取执行状态
+    ajax.onreadystatechange = function(){
+        //如果执行状态成功，那么就把返回信息写到指定的层里
+        if (ajax.readyState == 4 && ajax.status == 200){
+            //introducemsg.innerHTML = ajax.responseText;
+            //alert(111);
+        }
+    }
+	**/
+
+}
+ajax_init();
+
+var myhost = "http://www.abc.com:6003/00/";
+
+function ajax_httpget_str(obj,evt){
+	var myurl = myhost + "";
+    ajax.open("GET", myurl, true);
+    //获取执行状态
+    ajax.onreadystatechange = function(){
+        //如果执行状态成功，那么就把返回信息写到指定的层里
+        if (ajax.readyState == 4 && ajax.status == 200){
+            var panel = document.getElementById("ajax_result");
+			panel.innerHTML = ajax.responseText;
+            //alert(111);
+        }
+    }
+    ajax.send();
+}
+
+
+function ajax_httpget_bin(obj,evt){
+	var myurl = myhost + "";
+    ajax.open("GET", myurl, true);
+	ajax.responseType = "arraybuffer";
+    //获取执行状态
+    ajax.onreadystatechange = function(){ //oReq.onload = function (oEvent) {}
+        //如果执行状态成功，那么就把返回信息写到指定的层里
+        if (ajax.readyState == 4 && ajax.status == 200){
+            var panel = document.getElementById("ajax_result");
+			//panel.innerHTML = ajax.responseText;
+			var arrayBuffer = oReq.response; // Note: not oReq.responseText
+			if (arrayBuffer) {
+				var byteArray = new Uint8Array(arrayBuffer);
+				for (var i = 0; i < byteArray.byteLength; i++) {
+					//
+				}
+			}
+        }
+    }
+	ajax.send(null);
+}
+
+
+
+
+function ajax_httppost_str(obj,evt){
+	var myurl = myhost + "";
+	var poststr01 = "aggggggghhh";
+    //通过Post方式打开连接
+    ajax.open("POST", urlpost, true);
+    //定义传输的文件HTTP头信息
+    ajax.setRequestHeader("Content-Type","application/x-www-form-urlencoded");
+    //发送POST数据
+    var postStr = "mydda="+encodeURIComponent(poststr01)+"&";
+    //获取执行状态
+    ajax.onreadystatechange = function(){
+        //如果执行状态成功，那么就把返回信息写到指定的层里
+        if (ajax.readyState == 4 && ajax.status == 200){
+            //introducemsg.innerHTML = ajax.responseText;
+            //alert(111);
+        }
+    }
+    ajax.send(postStr);
+}
+
+
+
+function ajax_httppost_bin(obj,evt){
+	var myurl = myhost + "";
+	//var poststr01 = "aggggggghhh";
+    //通过Post方式打开连接
+    ajax.open("POST", urlpost, true);
+    //定义传输的文件HTTP头信息
+    //ajax.setRequestHeader("Content-Type","application/x-www-form-urlencoded");
+    //获取执行状态
+    ajax.onreadystatechange = function(){
+        //如果执行状态成功，那么就把返回信息写到指定的层里
+        if (ajax.readyState == 4 && ajax.status == 200){
+            //introducemsg.innerHTML = ajax.responseText;
+            //alert(111);
+        }
+    }
+
+	var blob = new Blob(['abc123'], {type: 'text/plain'});
+    ajax.send(blob);
+}
+
+
+
+function ajax_httppost_gzip(obj,evt){
+	var myurl = myhost + "";
+	//var poststr01 = "aggggggghhh";
+    //通过Post方式打开连接
+    ajax.open("POST", urlpost, true);
+    //定义传输的文件HTTP头信息
+    //ajax.setRequestHeader("Content-Type","application/x-www-form-urlencoded");
+    //获取执行状态
+    ajax.onreadystatechange = function(){
+        //如果执行状态成功，那么就把返回信息写到指定的层里
+        if (ajax.readyState == 4 && ajax.status == 200){
+            //introducemsg.innerHTML = ajax.responseText;
+            //alert(111);
+        }
+    }
+
+	var blob = new Blob(['abc123'], {type: 'text/plain'});
+    ajax.send(blob);
+}
+
+
+
+</script>
+</head>
+<body>
+<div>
+
+<div class="myspan">aaa</div>
+
+<div id="ajax_result"></div>
+
+<div>
+<button onClick="ajax_httpget_str(this,event);">GET获取字符串</button>&nbsp;&nbsp;
+<button onClick="ajax_httpget_bin(this,event);">GET获取二进制数据</button>&nbsp;&nbsp;
+<button onClick="">-POST获取字符串</button>&nbsp;&nbsp;
+<button onClick="">-POST获取二进制数据</button>&nbsp;&nbsp;
+</div>
+<div>
+<button onClick="ajax_httppost_str(this,event);">POST提交字符串</button>&nbsp;&nbsp;
+<button onClick="ajax_httppost_bin(this,event);">POST提交二进制数据</button>&nbsp;&nbsp;
+</div>
+<div>
+<button onClick="ajax_httppost_gzip(this,event);">POST提交gzip数据</button>&nbsp;&nbsp;
+</div>
+
+
+
+
+</div>
+</body>
+</html>
