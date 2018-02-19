@@ -1,0 +1,26 @@
+
+
+
+
+AJAX - 向服务器发送请求
+http://www.w3school.com.cn/ajax/ajax_xmlhttprequest_send.asp
+
+Ajax发送和接收二进制字节流数据的方法
+http://www.jb51.net/article/85087.htm
+
+ajax中获取和发送二进制数据的方法
+http://blog.csdn.net/indexchen/article/details/7631019
+
+js中的二进制操作相关类型和方法
+http://blog.csdn.net/charlene0824/article/details/51340238
+
+利用Ajax上传二进制文件
+http://blog.csdn.net/butterfly5211314/article/details/50876085
+
+利用WebSocket传输数组或者Blob的方案
+https://www.cnblogs.com/fengyunlishi/archive/2013/05/10/3071893.html
+
+php如何获取到formData上传图片的二进制数据
+https://segmentfault.com/q/1010000006897729
+
+
