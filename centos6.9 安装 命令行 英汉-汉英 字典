@@ -1,0 +1,14 @@
+
+centos6.9 安装 命令行 英汉-汉英 字典
+参考《centos6.9 安装 python3.4 + pip》并安装python3.4 + pip。
+pip3  install bs4
+pip3  install lxml
+wget https://codeload.github.com/ChestnutHeng/Wudao-dict/zip/master
+cd  /Wudao-dict-master/wudao-dict
+bash setup.sh
+重启命令行终端。
+wd -h
+wd hello
+wd 真
+
+https://github.com/ChestnutHeng/Wudao-dict
