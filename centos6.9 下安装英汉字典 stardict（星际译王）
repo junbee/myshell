@@ -31,5 +31,7 @@ http://ftp.altlinux.org/pub/distributions/ALTLinux/Sisyphus/noarch/RPMS.classic/
 https://centos.pkgs.org/6/naulinux-school-i386/stardict-3.0.2-1.el6.i686.rpm.html
 
 
+rpm -ivh stardict-dic-zh_CN-2.4.2-alt2_18.noarch.rpm
+yum localinstall stardict-dic-zh_CN-2.4.2-alt2_18.noarch.rpm
 
 
