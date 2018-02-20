@@ -1,0 +1,32 @@
+
+
+CentOS6.9 下安装英汉字典 stardict（星际译王）
+http://blog.csdn.net/xiaoniunwp/article/details/39718247
+http://blog.csdn.net/linuxiplinux/article/details/39830557
+http://www.jb51.net/LINUXjishu/280301.html
+
+https://centos.pkgs.org/6/naulinux-school-i386/stardict-3.0.2-1.el6.i686.rpm.html
+http://downloads.naulinux.ru/pub/NauLinux/6x/i386/sites/School/RPMS//stardict-3.0.2-1.el6.i686.rpm
+
+yum localinstall stardict-3.0.2-1.el6.i686.rpm 
+
+
+
+
+https://zhidao.baidu.com/share/7dec495fbca210403b113469aa2150d1.html
+https://pan.baidu.com/share/link?shareid=2476118040&uk=2535765662
+星际译王本地词典使用方法：
+将文件夹里的文件（后缀如.dict.dz,.dix,.ifo.syn）全部复制到
+/usr/share/stardict/dic  或  ~/.stardict/dic
+其中一个就可以了（注意，不要如“星际译王词典：金山词霸2007简明英汉字典_stardict-powerword2007_pwqec-2.4.2”这样的多层文件夹）。
+
+然后打开stardict程序，右下角“管理字典”(manage dictionaries)，分别将“Dict List”和“Manage Dict”中想要首先查的字典置顶即可。
+
+
+
+
+https://altlinux.pkgs.org/sisyphus/classic-noarch/stardict-dic-zh_CN-2.4.2-alt2_18.noarch.rpm.html
+http://ftp.altlinux.org/pub/distributions/ALTLinux/Sisyphus/noarch/RPMS.classic//stardict-dic-zh_CN-2.4.2-alt2_18.noarch.rpm
+
+
+
