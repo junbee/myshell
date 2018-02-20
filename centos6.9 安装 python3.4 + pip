@@ -16,6 +16,7 @@ python  get-pip.py
 python --version
 Python 3.4.5
 pip --version
+pip3 --version
 pip 9.0.1 from /usr/lib/python3.4/site-packages (python 3.4)
 
 // yum -y install gcc readline-devel sqlite-devel 
