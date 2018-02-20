@@ -1,0 +1,26 @@
+
+centos6.9 安装 python3.4 + pip
+
+yum install python34
+rm  /usr/bin/python
+ln -s /usr/bin/python3.4  /usr/bin/python
+
+#yum 是依赖python2.6，现在直接运行yum就会报错~~~。
+vim /usr/bin/yum
+将第一行改为#!/usr/bin/python2.6
+
+wget --no-check-certificate https://bootstrap.pypa.io/get-pip.py
+python  get-pip.py
+#ps:使用对应python来运行get-pip.py就会安装属于相应python版本的pip。
+
+python --version
+Python 3.4.5
+pip --version
+pip 9.0.1 from /usr/lib/python3.4/site-packages (python 3.4)
+
+// yum -y install gcc readline-devel sqlite-devel 
+// yum -y install zlib-devel openssl-devel
+// yum install python34-pip
+http://blog.csdn.net/karchar/article/details/52602439
+https://www.python.org/ftp/python/
+
