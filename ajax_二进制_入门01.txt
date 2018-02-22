@@ -1,6 +1,18 @@
 
 
 
+XMLHttpRequest Level 2已经实现了跨域访问
+http://www.jb51.net/article/80881.htm
+这需要在远程服务器端添加如下代码
+header('Access-Control-Allow-Origin:*'); //*代表可访问的地址，可以设置指定域名
+header('Access-Control-Allow-Methods:POST,GET'); 
+这样在客户端使用常规的AJAX代码即可。
+http://blog.csdn.net/veloi/article/details/53836527
+header('Access-Control-Allow-Origin: *');
+header("Access-Control-Allow-Headers: Origin, X-Requested-With, Content-Type, Accept");
+header('Access-Control-Allow-Methods: GET, POST, PUT,DELETE');
+http://www.ruanyifeng.com/blog/2016/04/cors.html
+Content-Type：只限于三个值application/x-www-form-urlencoded、multipart/form-data、text/plain
 
 AJAX - 向服务器发送请求
 http://www.w3school.com.cn/ajax/ajax_xmlhttprequest_send.asp
