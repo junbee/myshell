@@ -1,0 +1,115 @@
+<!DOCTYPE html><html><head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>DataView_01</title>
+<!--script language="javascript" type="text/javascript" src="http://www.abc.com:6003/001.js"></script-->
+<!--link rel="stylesheet" type="text/css" href="http://www.abc.com:6003/001.css" /-->
+<style>
+ul {list-style-type:none; margin:8px; padding:0px;display:block;float:left;}
+li {list-style-type:none; margin:0px; padding:0px;}
+.myspan { margin:1px; padding:4px; background-color:#FFC; cursor:pointer; }
+.myspan:hover{ background-color: burlywood; }
+</style>
+<script type="text/javascript" language="javascript">
+
+function isLittleEndian() {
+    var buf = new ArrayBuffer(2);
+    var view = new DataView(buf);
+    view.setInt16(0, 256, true); // 显式以little endian写入数据
+    // 此时buf里的内存布局应该是 00 01
+    var i16 = new Int16Array(buf);
+    // 如果以little endian读取，它就是256；以big endian读取，则是1
+    return (i16[0] === 256);
+}
+
+
+function test_isLittleE(obj,evt){
+	var panel = document.getElementById("ajax_result");
+	if(  isLittleEndian()  ){
+		panel.innerHTML = "当前主机是：小端字节序。";
+	}else{
+		panel.innerHTML = "当前主机是：大端字节序。";
+	}
+}
+
+
+
+
+function test_DataView_01(obj,evt){
+	var panel = document.getElementById("ajax_result");
+	//var array = new Uint16Array([97, 32, 72, 101, 108, 108, 111, 32, 119, 111, 114, 108, 100, 33]);
+
+	var buffer = new ArrayBuffer(16);
+	var mydv = new DataView(buffer);
+	mydv.setUint32(0, 9, true);
+	mydv.setUint32(4, 1, true);
+	mydv.setUint32(8, 8, true);
+	mydv.setUint32(12, 2, true);
+	/**
+	mydv.setUint32(0, 9, false);
+	mydv.setUint32(4, 1, false);
+	mydv.setUint32(8, 8, false);
+	mydv.setUint32(12, 2, false);
+	**/
+	
+	//如果  当前主机是：小端字节序 才可以得到正确的显示。
+	var array = new Uint32Array( buffer );
+	var str = "", iii=0, len =4;
+	for(;iii<len;iii++){
+		str += "," + array[iii];
+	}
+	panel.innerHTML = str;
+	
+/**	
+var buffer = new ArrayBuffer(24);
+var dv = new DataView(buffer);
+// 从第1个字节读取一个8位无符号整数
+var v1 = dv.getUint8(0);
+// 从第2个字节读取一个16位无符号整数
+var v2 = dv.getUint16(1); 
+// 从第4个字节读取一个16位无符号整数
+var v3 = dv.getUint16(3);
+**/
+/**
+// 如果需要使用小端字节序解读，必须在get方法的第二个参数指定true。
+// 小端字节序
+var v1 = dv.getUint16(1, true);
+// 大端字节序
+var v2 = dv.getUint16(3, false);
+// 大端字节序
+var v3 = dv.getUint16(3);
+**/
+/**
+// 在第1个字节，以大端字节序写入值为25的32位整数
+dv.setInt32(0, 25, false); 
+// 在第5个字节，以大端字节序写入值为25的32位整数
+dv.setInt32(4, 25); 
+// 在第9个字节，以小端字节序写入值为2.5的32位浮点数
+dv.setFloat32(8, 2.5, true);
+**/
+	
+}
+
+
+
+</script>
+</head><body><div>
+
+
+
+
+<div class="myspan">aaa</div>
+<div id="ajax_result"></div>
+
+<div>
+<button onClick="test_isLittleE(this,event);">测试当前主机的字节序</button>&nbsp;&nbsp;
+</div>
+
+<div>
+<button onClick="test_DataView_01(this,event);">测试DataView_01</button>&nbsp;&nbsp;
+</div>
+
+
+
+
+
+</div></body></html>
