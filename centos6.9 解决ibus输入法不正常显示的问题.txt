@@ -1,0 +1,25 @@
+
+centos6.9 解决ibus输入法不正常显示的问题
+https://www.cnblogs.com/technologylife/p/6644564.html
+是因为升级了python导致的。之前的python2.6升级到了python3.4了。
+　解决方法：分别将 /usr/libexec/ibus-ui-gtk，
+　　　　　　　　  /usr/bin/ibus-setup，
+　　　　　　　　 /usr/libexec/ibus-engine-table　
+　这三个文件其中的“exec python”改为“exec python2.6”
+修改完毕后，注销重新登录测试
+
+cat /usr/libexec/ibus-ui-gtk
+cat /usr/bin/ibus-setup
+cat /usr/libexec/ibus-engine-table
+
+python2.6  --version
+vi /usr/libexec/ibus-ui-gtk
+vi /usr/bin/ibus-setup
+vi /usr/libexec/ibus-engine-table
+
+vi 复制整行
+1）把光标移动到要复制的行上
+2）按yy
+3）把光标移动到要复制的位置
+4）按p
+
