@@ -25,3 +25,8 @@ pip 9.0.1 from /usr/lib/python3.4/site-packages (python 3.4)
 http://blog.csdn.net/karchar/article/details/52602439
 https://www.python.org/ftp/python/
 
+
+升级python后导致 ibus输入法不正常显示的问题 的解决方法：
+centos6.9 解决ibus输入法不正常显示的问题.txt
+https://github.com/junbee/myshell/blob/master/centos6.9%20%E8%A7%A3%E5%86%B3ibus%E8%BE%93%E5%85%A5%E6%B3%95%E4%B8%8D%E6%AD%A3%E5%B8%B8%E6%98%BE%E7%A4%BA%E7%9A%84%E9%97%AE%E9%A2%98.txt
+
