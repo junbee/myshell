@@ -5,6 +5,9 @@ http://blog.csdn.net/my_heart_/article/details/52295588
 
 linux gbk utf8 文本互转
 iconv -f gbk -t utf8 filename
+字符编码转换工具
+http://codingstandards.iteye.com/blog/807077
+格式：iconv -f from-encoding -t to-encoding inputfile -o outputfile
 
 
 dos2unix命令将dos文件转换为unix格式
