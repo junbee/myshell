@@ -15,6 +15,11 @@ http://blog.csdn.net/leedaning/article/details/53024290
 dos2unix file
 
 
+AWK用法入门详解
+https://www.cnblogs.com/losbyday/p/5854707.html
+#last -n 5 | awk  '{print $1}'
+
+find /myfo/  -name "*.c" -print   |   awk   '{print  "iconv  -f gbk   -t utf8  "$1"  -o  "$1".txt"}'    |   bash
 
 
 
