@@ -3,6 +3,15 @@
 Linux下find（文件查找）命令使用实例总结
 http://blog.csdn.net/my_heart_/article/details/52295588
 
+linux gbk utf8 文本互转
+iconv -f gbk -t utf8 filename
+
+
+dos2unix命令将dos文件转换为unix格式
+http://blog.csdn.net/leedaning/article/details/53024290
+dos2unix file
+
+
 
 
 
