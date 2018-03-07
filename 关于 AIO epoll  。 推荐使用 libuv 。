@@ -1,0 +1,47 @@
+
+了解了 epoll 后， 继续推荐使用 libuv 。
+
+
+Linux下异步I/0: Linux 上的 AIO 简介 (2/2)
+http://blog.sina.com.cn/s/blog_3e3fcadd0100grgk.html
+aio_read、aio_write 
+
+ linux驱动---file_operations异步读写aio_read、aio_write 
+http://blog.csdn.net/eZiMu/article/details/54892088
+13.2.3 Linux驱动中的异步函数（aio_read和aio_write）
+http://book.51cto.com/art/201311/418623.htm
+linux下aio异步读写详解与实例
+http://blog.csdn.net/Shreck66/article/details/48765533
+ linux AIO （异步IO） 那点事儿 
+ https://cnodejs.org/topic/4f16442ccae1f4aa270010a7/
+
+aio_read libuv
+
+
+Socket网络编程--epoll小结。  epoll 例子
+https://www.cnblogs.com/wunaozai/p/3895860.html
+Linux之epoll详细解析实现 
+https://www.cnblogs.com/zengyiwen/p/7213f3303eca4bb08fd270f7d5772100.html
+如何使用epoll？一个完整的C例子
+http://www.yeolar.com/note/2012/07/02/epoll-example/
+epoll的内部实现 & 百万级别句柄监听 & lt和et模式非常好的解释
+https://www.cnblogs.com/charlesblc/p/6242479.html
+统一事件源epoll代码示例
+http://www.cnblogs.com/charlesblc/p/5554785.html
+网络开发库从libuv说到epoll
+https://www.cnblogs.com/life2refuel/p/5297620.html
+
+
+
+
+
+关于同步，异步，阻塞，非阻塞，IOCP/epoll,select/poll,AIO ,NIO ,BIO的总结 
+http://blog.csdn.net/chen8238065/article/details/48315085
+慢慢聊异步IO之Linux Epoll
+http://blog.csdn.net/zhxue123/article/details/22285957
+一般来说，服务器端的I/O主要有两种情况：一是来自网络的I/O；二是对文件(设备)的I/O。Windows的异步I/O模型能很好的适用于这两种情况。而Linux针对前者提供了epoll模型，针对后者提供了AIO模型(关于是否把两者统一起来争论了很久)。
+
+
+
+
+
