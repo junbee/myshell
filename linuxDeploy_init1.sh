@@ -9,6 +9,10 @@ sudo apt install vim
 
 
 
+## Vim十大必备插件
+## https://www.cnblogs.com/shanql/articles/6048412.html
+## Taglist  NERDTree  WinManager  NerdCommenter  Ctrlp  Vundle
+
 
 
 
