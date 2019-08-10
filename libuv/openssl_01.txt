@@ -1,0 +1,4 @@
+su
+apt-get -y  install  openssl  libssl-dev  
+
+openssl version -a
